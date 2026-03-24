@@ -16,5 +16,5 @@ org_id BIGINT NOT NULL REFERENCES organization(id),
 id_blocked BOOLEAN NOT NULL DEFAULT 'false'
 );
 
-INSERT INTO organization(name) VALUE(1, 'ABC');
-INSERT INTO keys(key, start_date, end_date, org_id) VALUE(uuid_generate_v4(), '2026-03-24', '2027-03-24', 1);
+INSERT INTO organization(name) VALUES('ABC');
+INSERT INTO keys(key, start_date, end_date, org_id) VALUES(uuid_generate_v4(), '2026-03-24', '2027-03-24', 1);
