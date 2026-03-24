@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="434.0" prefWidth="502.0" style="-fx-background-color: #87cefa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.admin.AdminFinance">
+   <children>
+      <Button fx:id="diagramButton" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#showFinanceDiagram" prefHeight="34.0" prefWidth="195.0" style="-fx-background-color: #3baff7;" text="Показать график">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Century" size="17.0" />
+         </font>
+      </Button>
+      <ToolBar layoutX="26.0" layoutY="96.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: #3baff7;">
+         <items>
+            <Button fx:id="findFinanceButton" mnemonicParsing="false" onAction="#findFinance" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #0a9bf5;" text="Find/Refresh" />
+            <TextField fx:id="findFinanceField" prefHeight="26.0" prefWidth="88.0" promptText="finance_id" />
+         </items>
+      </ToolBar>
+      <TableView fx:id="financeTable" layoutX="26.0" layoutY="136.0" prefHeight="284.0" prefWidth="459.0">
+         <columns>
+            <TableColumn fx:id="financeId" prefWidth="63.20001220703125" text="finance_id" />
+            <TableColumn fx:id="directionColumn" prefWidth="92.0" text="direction" />
+            <TableColumn fx:id="moneyColumn" prefWidth="115.199951171875" text="money" />
+            <TableColumn fx:id="dateColumn" prefWidth="79.20001220703125" text="date" />
+            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="107.19999999999999" text="description" />
+            <TableColumn fx:id="departmentIdColumn" minWidth="0.0" prefWidth="107.19999999999999" text="department_id" />
+         </columns>
+      </TableView>
+      <ToolBar layoutX="213.0" layoutY="96.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="273.0" style="-fx-background-color: #3baff7;">
+         <items>
+            <Button fx:id="deleteFinanceButton" mnemonicParsing="false" onAction="#deleteFinance" style="-fx-background-color: #0a9bf5;" text="Delete" />
+            <Button fx:id="updateFinanceButton" mnemonicParsing="false" onAction="#updateFinance" style="-fx-background-color: #0a9bf5;" text="Update" />
+            <Button fx:id="addFinanceButton" mnemonicParsing="false" onAction="#addFinance" style="-fx-background-color: #0a9bf5;" text="Add" />
+            <Label fx:id="moneyLabel" prefHeight="18.0" prefWidth="97.0" text="O BYN">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="26.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+      <RadioButton fx:id="allTimeExpense" layoutX="268.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeRadioButton" selected="true" text="Расходы и доходы за всё время" />
+      <RadioButton fx:id="periodExpense" layoutX="268.0" layoutY="32.0" mnemonicParsing="false" onAction="#changeRadioButton" text="Расходы и доходы за период" />
+      <TextField fx:id="afterPeriod" disable="true" layoutX="391.0" layoutY="51.0" prefHeight="10.0" prefWidth="88.0" promptText="ДД.ММ.ГГГГ" />
+      <TextField fx:id="beforePeriod" disable="true" layoutX="262.0" layoutY="51.0" prefHeight="10.0" prefWidth="88.0" promptText="ДД.ММ.ГГГГ" />
+      <Label layoutX="244.0" layoutY="55.0" text="c :" />
+      <Label layoutX="366.0" layoutY="55.0" text="до :" />
+      <Label fx:id="dateReadLabel" layoutX="61.0" layoutY="55.0" style="-fx-text-fill: #ff0000;" text="Ошибка чтения периода" visible="false" />
+      <RadioButton fx:id="expenseDiagram" layoutX="129.0" layoutY="73.0" mnemonicParsing="false" text="Расходы" />
+      <RadioButton fx:id="incomeDiagram" layoutX="45.0" layoutY="73.0" mnemonicParsing="false" selected="true" text="Доходы" />
+   </children>
+</AnchorPane>

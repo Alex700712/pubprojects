@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="departmentListPane" prefHeight="434.0" prefWidth="500.0" style="-fx-background-color: #87cefa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.user.ShowClients">
+    <children>
+        <ToolBar layoutX="20.0" layoutY="21.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="459.0" style="-fx-background-color: #3baff7;">
+            <items>
+                <Button fx:id="findClientButton" mnemonicParsing="false" onAction="#findClient" style="-fx-background-color: #0a9bf5;" text="Find/Refresh" />
+                <TextField fx:id="findClientField" prefHeight="26.0" prefWidth="96.0" promptText="client_id" />
+                <ToolBar fx:id="crudToolbar" disable="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="258.0" style="-fx-background-color: #3baff7;" visible="false">
+                    <items>
+                        <Button fx:id="deleteClientButton" mnemonicParsing="false" onAction="#deleteClient" style="-fx-background-color: #0a9bf5;" text="Delete" />
+                        <Button fx:id="updateClientButton" mnemonicParsing="false" onAction="#updateClient" style="-fx-background-color: #0a9bf5;" text="Update" />
+                        <Button fx:id="addClientButton" mnemonicParsing="false" onAction="#addClient" style="-fx-background-color: #0a9bf5;" text="Add" />
+                    </items>
+                </ToolBar>
+            </items>
+        </ToolBar>
+        <TableView fx:id="clientTable" layoutX="20.0" layoutY="66.0" prefHeight="345.0" prefWidth="459.0">
+            <columns>
+                <TableColumn fx:id="clientIdColumn" prefWidth="51.99999809265137" text="client_id" />
+                <TableColumn fx:id="nameColumn" prefWidth="254.39997100830078" text="fullname" />
+                <TableColumn fx:id="departmentIdColumn" prefWidth="88.0" text="department_id" />
+            <TableColumn fx:id="serviceIdColumn" prefWidth="61.60003662109375" text="service_id" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

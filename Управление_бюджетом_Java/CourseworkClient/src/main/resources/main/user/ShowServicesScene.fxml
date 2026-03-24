@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="servicesListPane" prefHeight="434.0" prefWidth="500.0" style="-fx-background-color: #87cefa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.user.ShowService">
+    <children>
+        <ToolBar layoutX="20.0" layoutY="26.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="459.0" style="-fx-background-color: #3baff7;">
+            <items>
+                <Button fx:id="findServiceButton" mnemonicParsing="false" onAction="#findService" style="-fx-background-color: #0a9bf5;" text="Find/Refresh" />
+                <TextField fx:id="findServiceField" prefHeight="26.0" prefWidth="88.0" promptText="service_id" />
+                <ToolBar fx:id="crudToolbar" disable="true" nodeOrientation="RIGHT_TO_LEFT" prefHeight="0.0" prefWidth="258.0" style="-fx-background-color: #3baff7;" visible="false">
+                    <items>
+                        <Button fx:id="deleteServiceButton" mnemonicParsing="false" onAction="#deleteService" style="-fx-background-color: #0a9bf5;" text="Delete" />
+                        <Button fx:id="updateServiceButton" mnemonicParsing="false" onAction="#updateService" style="-fx-background-color: #0a9bf5;" text="Update" />
+                        <Button fx:id="addServiceButton" mnemonicParsing="false" onAction="#addService" style="-fx-background-color: #0a9bf5;" text="Add" />
+                    </items>
+                </ToolBar>
+            </items>
+        </ToolBar>
+        <TableView fx:id="serviceTable" layoutX="20.0" layoutY="66.0" prefHeight="345.0" prefWidth="459.0">
+            <columns>
+                <TableColumn fx:id="serviceIdColumn" prefWidth="70.40002250671387" text="service_id" />
+                <TableColumn fx:id="nameColumn" prefWidth="263.9999465942383" text="name" />
+                <TableColumn fx:id="costColumn" minWidth="0.0" prefWidth="124.800048828125" text="cost" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

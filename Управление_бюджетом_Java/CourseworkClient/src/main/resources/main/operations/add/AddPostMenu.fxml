@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="222.0" prefWidth="356.0" style="-fx-background-color: #87cefa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.operations.add.AddPostMenu">
+    <children>
+        <AnchorPane prefHeight="34.0" prefWidth="356.0" style="-fx-background-color: #ceebfd;" />
+        <Button fx:id="addButton" layoutX="116.0" layoutY="173.0" mnemonicParsing="false" onAction="#addPost" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: #3baff7;" text="Добавить">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <font>
+                <Font name="Century" size="17.0" />
+            </font>
+        </Button>
+      <Label layoutX="78.0" layoutY="59.0" text="Название :" />
+      <Label layoutX="78.0" layoutY="92.0" text="Приоритет :" />
+      <Label layoutX="78.0" layoutY="124.0" text="Зарплата :" />
+      <TextField fx:id="nameField" layoutX="156.0" layoutY="55.0" prefHeight="26.0" prefWidth="165.0" />
+      <TextField fx:id="priorityField" layoutX="155.0" layoutY="88.0" prefHeight="26.0" prefWidth="43.0" />
+      <TextField fx:id="salaryField" layoutX="155.0" layoutY="120.0" prefHeight="26.0" prefWidth="106.0" />
+    </children>
+</AnchorPane>

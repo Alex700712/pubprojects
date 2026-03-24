@@ -1,0 +1,58 @@
+CREATE DATABASE MyCoursework;
+USE MyCoursework;
+
+CREATE TABLE IF NOT EXISTS `MyCoursework`.`user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `role` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `login_UNIQUE` (`login` ASC) VISIBLE
+  );
+
+CREATE TABLE IF NOT EXISTS `MyCoursework`.`post` (
+  `post_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `priority` INT NULL,
+  `salary` FLOAT NOT NULL,
+  PRIMARY KEY (`post_id`)
+  );
+
+CREATE TABLE IF NOT EXISTS `MyCoursework`.`department` (
+  `department_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `people_count` INT NULL,
+  PRIMARY KEY (`department_id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE
+  );
+
+CREATE TABLE IF NOT EXISTS `MyCoursework`.`finance` (
+  `finance_id` INT NOT NULL AUTO_INCREMENT,
+  `direction` VARCHAR(45) NULL,
+  `money` INT NULL,
+  `date` DATE NULL,
+  `description` VARCHAR(100) NULL,
+  PRIMARY KEY (`finance_id`)
+  );
+
+CREATE TABLE IF NOT EXISTS `MyCoursework`.`employee` (
+  `employee_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`employee_id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE
+  );
+  
+  CREATE TABLE IF NOT EXISTS `MyCoursework`.`client`(
+  `client_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`client_id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE
+  );
+  
+  CREATE TABLE IF NOT EXISTS `MyCoursework`.`service`(
+  `service_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `cost` FLOAT NOT NULL,
+  PRIMARY KEY (`service_id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE
+  );

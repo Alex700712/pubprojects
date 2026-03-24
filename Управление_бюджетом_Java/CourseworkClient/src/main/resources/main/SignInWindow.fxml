@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #87cefa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ui.SignIn">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" />
+      <TextField id="loginSignInField" fx:id="loginSignInField" layoutX="166.0" layoutY="175.0" onKeyPressed="#keysPressed" prefHeight="26.0" prefWidth="179.0" promptText="Login" />
+      <Label id="appNameLabel" fx:id="appNameLabel" alignment="CENTER" layoutX="154.0" layoutY="86.0" prefHeight="52.0" prefWidth="203.0" text="Budget Manager" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bodoni MT Condensed" size="43.0" />
+         </font>
+      </Label>
+      <Button fx:id="signInButton" layoutX="206.0" layoutY="280.0" mnemonicParsing="false" onAction="#enterPressed" onKeyPressed="#keysPressed" prefHeight="44.0" prefWidth="98.0" text="Sign In">
+         <font>
+            <Font name="Bodoni MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordSignInField" layoutX="166.0" layoutY="220.0" onKeyPressed="#keysPressed" prefHeight="26.0" prefWidth="179.0" promptText="Password" />
+      <Label fx:id="signInErrorLabel" layoutX="110.0" layoutY="255.0" prefHeight="18.0" prefWidth="298.0" style="-fx-text-fill: #ff0000;" text="Ошибка входа. Данные для входа неверны" visible="false">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="connectionErrorLabel" layoutX="144.0" layoutY="255.0" style="-fx-text-fill: #ff0000;" text="Ошибка подключения к серверу." visible="false">
+         <font>
+            <Font name="Century" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
